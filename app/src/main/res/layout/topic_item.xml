@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/clItem"
+        android:background="@drawable/ripple_effect_image">
+
+    <TextView
+            android:id="@+id/tvTime"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_size_middle"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/indent"
+            tools:text="@string/time"
+            android:layout_marginTop="@dimen/indent_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <TextView
+            android:id="@+id/tvTheme"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            tools:text="@string/theme"
+            android:layout_marginEnd="@dimen/indent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/indent_vertical"
+            app:layout_constraintBottom_toTopOf="@+id/tvSpeaker"
+            app:layout_constraintTop_toTopOf="@+id/tvTime"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvTime" android:layout_marginStart="20dp"/>
+
+    <TextView
+            android:id="@+id/tvRoom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@android:color/black"
+            tools:text="@string/room"
+            app:layout_constraintStart_toStartOf="@+id/tvTime"
+            app:layout_constraintTop_toBottomOf="@+id/tvTime"
+    />
+
+    <ImageView
+            android:id="@+id/ivContent"
+            android:layout_width="@dimen/width_image"
+            android:layout_height="@dimen/height_image"
+            android:tint="@android:color/holo_green_dark"
+            tools:src="@drawable/ic_cellphone_ui"
+            app:layout_constraintStart_toStartOf="@+id/tvTime"
+            app:layout_constraintTop_toBottomOf="@+id/tvRoom"
+    />
+
+    <ImageView
+            android:id="@+id/ivLanguage"
+            android:layout_width="@dimen/width_image"
+            android:layout_height="@dimen/height_image"
+            tools:src="@drawable/ic_rus"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPosition"
+            app:layout_constraintTop_toTopOf="@+id/tvSpeaker"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvTheme"
+    />
+
+    <TextView
+            android:id="@+id/tvSpeaker"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_size_middle"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            tools:text="@string/speaker"
+            app:layout_constraintStart_toEndOf="@+id/ivLanguage"
+            android:layout_marginStart="@dimen/indent"
+            app:layout_constraintBottom_toTopOf="@+id/tvPosition"
+    />
+
+    <TextView
+            android:id="@+id/tvPosition"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="@string/position_speaker"
+            app:layout_constraintStart_toStartOf="@+id/tvSpeaker"
+            android:layout_marginBottom="@dimen/indent_vertical"
+            android:layout_marginEnd="@dimen/indent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+</android.support.constraint.ConstraintLayout>

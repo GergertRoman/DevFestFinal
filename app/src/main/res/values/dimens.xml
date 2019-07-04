@@ -1,0 +1,19 @@
+<resources>
+  <dimen name="fab_margin">16dp</dimen>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="headerSize">25sp</dimen>
+  <dimen name="text_size_big">20sp</dimen>
+  <dimen name="text_size_middle">15sp</dimen>
+  <dimen name="text_size_small">10sp</dimen>
+  <dimen name="indent">20dp</dimen>
+  <dimen name="indent_vertical">10dp</dimen>
+  <dimen name="indent_horizontal">10dp</dimen>
+  <dimen name="width_image">25dp</dimen>
+  <dimen name="height_image">25dp</dimen>
+  <dimen name="indentImage">10dp</dimen>
+  <dimen name="indentLanguageInAvatar">8dp</dimen>
+  <dimen name="sizeAvatar">150dp</dimen>
+  <dimen name="sizeBackImage">30dp</dimen>
+
+
+</resources>
