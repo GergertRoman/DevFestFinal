@@ -14,10 +14,10 @@ interface SpeakerDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertSpeaker(speaker: Speaker)
 
-    /*@Delete
+    @Delete
     fun deleteSpeaker(speaker: Speaker)
 
     @Query("DELETE FROM speakers")
-    fun deleteAllSpeaker()*/
+    fun deleteAllSpeaker()
 }
 

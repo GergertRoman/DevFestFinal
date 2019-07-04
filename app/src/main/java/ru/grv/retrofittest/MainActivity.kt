@@ -75,7 +75,7 @@ open class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListe
         mDbWorkerThread.postTask(task)
     }
 
-    private  fun response() {
+    private fun response() {
         val foursquareService: FoursquareService = retrofit.create(FoursquareService::class.java)
         val call = foursquareService.getVenues()
 

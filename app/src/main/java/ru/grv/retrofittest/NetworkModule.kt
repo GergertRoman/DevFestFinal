@@ -5,7 +5,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 
-
 private const val URL = "https://storage.yandexcloud.net"
 
 private val httpClient = OkHttpClient.Builder()

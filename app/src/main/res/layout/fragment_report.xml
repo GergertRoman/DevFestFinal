@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
-        android:fillViewport="true"
-        android:isScrollContainer="true"
-        android:scrollbarAlwaysDrawVerticalTrack="true"
-        android:scrollbars="vertical"
-        app:layout_scrollFlags="scroll">
+        android:layout_height="match_parent">
 
     <android.support.constraint.ConstraintLayout
             android:id="@+id/clMainView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorSilver"
-            app:layout_constraintTop_toTopOf="@+id/scrollView"
-            app:layout_constraintBottom_toBottomOf="@+id/scrollView"
-            >
+            android:background="@color/colorSilver">
 
         <TextView
                 android:id="@+id/tvTime"
@@ -46,7 +38,8 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="@dimen/indent_vertical"
                 tools:text="@string/theme"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+        />
 
         <TextView
                 android:id="@+id/tvRoom"
@@ -57,7 +50,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvTheme"
                 android:layout_marginStart="20dp"
                 tools:text="@string/room"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+        />
 
         <ImageView
                 android:id="@+id/ivContent"
@@ -70,7 +64,8 @@
                 android:layout_marginEnd="@dimen/indent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintBottom_toBottomOf="@+id/tvTime"
-                app:layout_constraintTop_toTopOf="@+id/tvTime"/>
+                app:layout_constraintTop_toTopOf="@+id/tvTime"
+        />
 
         <ImageView
                 android:id="@+id/ivLanguage"
@@ -111,18 +106,6 @@
                 app:layout_constraintHorizontal_bias="0.0"
         />
 
-        <!--<View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="@android:color/white"
-                app:layout_constraintTop_toBottomOf="@+id/tvPosition"
-                app:layout_constraintBottom_toBottomOf="@+id/clMainView"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                />-->
-
         <TextView
                 android:id="@+id/tvDescription"
                 android:layout_height="wrap_content"
@@ -130,20 +113,15 @@
                 android:textSize="@dimen/text_size_middle"
                 android:textColor="@android:color/black"
                 android:background="@android:color/white"
-                android:paddingTop="@dimen/indent"
+                android:layout_marginTop="@dimen/indent_vertical"
+                android:paddingTop="@dimen/indent_vertical"
+                android:paddingBottom="@dimen/indent"
                 android:paddingStart="@dimen/indent"
                 android:paddingEnd="@dimen/indent"
                 tools:text="@string/description"
                 app:layout_constraintTop_toBottomOf="@+id/tvPosition"
-                android:layout_marginTop="10dp"
-                app:layout_constraintVertical_weight="1"
-                />
-                <!--app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"-->
-
-                <!--app:layout_constraintTop_toTopOf="@+id/view"
-                -->
+        />
 
     </android.support.constraint.ConstraintLayout>
 
-</android.support.v4.widget.NestedScrollView>
+</ScrollView>

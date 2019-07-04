@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_report.*
 import ru.grv.retrofittest.db.DevFestDatabase
 
-class ReportFragment: Fragment() {
+class ReportFragment : Fragment() {
     var speakerSelect: String? = null
     private var mDb: DevFestDatabase? = null
     private lateinit var mDbWorkerThread: DbWorkerThread
@@ -48,13 +48,13 @@ class ReportFragment: Fragment() {
 
                 tvRoom?.text = "Room " + activity?.room
 
-                when(activity?.track) {
+                when (activity?.track) {
                     "android" -> ivContent?.setImageResource(R.drawable.android_head)
                     "frontend" -> ivContent?.setImageResource(R.drawable.ic_cellphone_ui)
                     "common" -> ivContent?.setImageResource(R.drawable.ic_developer_board)
                 }
 
-                when(speaker?.flagImage) {
+                when (speaker?.flagImage) {
                     "ru" -> ivLanguage?.setImageResource(R.drawable.ic_rus)
                     "de" -> ivLanguage?.setImageResource(R.drawable.ic_germany)
                     "us" -> ivLanguage?.setImageResource(R.drawable.ic_usa)

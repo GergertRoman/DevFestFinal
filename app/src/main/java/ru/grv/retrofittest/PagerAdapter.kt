@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentPagerAdapter
 
 class PagerAdapter(fm: FragmentManager, extras: Bundle) : FragmentPagerAdapter(fm) {
     private val bundle = extras
-    var speakerSelect: String? = null
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {

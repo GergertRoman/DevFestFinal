@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+
         android:id="@+id/clItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/ripple_effect_image">
 
     <TextView
@@ -35,7 +36,9 @@
             app:layout_constraintBottom_toTopOf="@+id/tvSpeaker"
             app:layout_constraintTop_toTopOf="@+id/tvTime"
             app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/tvTime" android:layout_marginStart="20dp"/>
+            app:layout_constraintStart_toEndOf="@+id/tvTime"
+            android:layout_marginStart="@dimen/indent"
+    />
 
     <TextView
             android:id="@+id/tvRoom"

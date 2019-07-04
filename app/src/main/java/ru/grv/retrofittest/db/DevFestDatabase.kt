@@ -7,19 +7,19 @@ import android.content.Context
 import ru.grv.retrofittest.Speaker
 import ru.grv.retrofittest.Talk
 import ru.grv.retrofittest.db.unitlocalized.ActivityDao
-//import ru.grv.retrofittest.db.entity.SpeakerData
 import ru.grv.retrofittest.db.unitlocalized.SpeakerDao
 
 @Database(entities = [Talk::class, Speaker::class], version = 1, exportSchema = false)
-abstract class DevFestDatabase: RoomDatabase() {
+abstract class DevFestDatabase : RoomDatabase() {
 
     companion object {
-        @Volatile var database: DevFestDatabase? = null
+        @Volatile
+        var database: DevFestDatabase? = null
         private val LOCK = Any()
         private const val DB_NAME = "devfest.db"
 
-        operator fun invoke(context: Context) = database?: synchronized(LOCK) {
-            database?: buildDatabase(context).also { database = it }
+        operator fun invoke(context: Context) = database ?: synchronized(LOCK) {
+            database ?: buildDatabase(context).also { database = it }
         }
 
         private fun buildDatabase(context: Context) =
@@ -32,23 +32,4 @@ abstract class DevFestDatabase: RoomDatabase() {
     fun destroyInstance() {
         database = null
     }
-
-    /*companion object {
-        private var INSTANCE: DevFestDatabase? = null
-
-        fun getInstance(context: Context): DevFestDatabase? {
-            if (INSTANCE == null) {
-                synchronized(DevFestDatabase::class) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                        DevFestDatabase::class.java, "devfest.db")
-                        .build()
-                }
-            }
-            return INSTANCE
-        }
-
-        fun destroyInstance() {
-            INSTANCE = null
-        }
-    }*/
 }

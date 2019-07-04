@@ -1,170 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".SpeakerFragment">
+        xmlns:tools="http://schemas.android.com/tools"
 
-    <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/civAvatar"
-            android:layout_width="@dimen/sizeAvatar"
-            android:layout_height="@dimen/sizeAvatar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/indent"
-            android:layout_marginTop="@dimen/indentImage"
-            tools:src="@drawable/ic_rus"
-    />
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/civBack"
-            android:layout_width="@dimen/sizeBackImage"
-            android:layout_height="@dimen/sizeBackImage"
-            android:src="@drawable/white_image"
-            app:layout_constraintEnd_toEndOf="@+id/ivLanguage"
-            app:layout_constraintBottom_toBottomOf="@+id/ivLanguage"
-            app:layout_constraintStart_toStartOf="@+id/ivLanguage"
-            app:layout_constraintTop_toTopOf="@+id/ivLanguage"
-    />
-
-    <ImageView
-            android:id="@+id/ivLanguage"
-            android:layout_width="@dimen/width_image"
-            android:layout_height="@dimen/width_image"
-            app:layout_constraintEnd_toEndOf="@+id/civAvatar"
-            app:layout_constraintBottom_toBottomOf="@+id/civAvatar"
-            android:layout_marginEnd="@dimen/indentLanguageInAvatar"
-            android:layout_marginBottom="@dimen/indentLanguageInAvatar"
-    />
-
-    <TextView
-            android:id="@+id/tvSpeaker"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:textSize="@dimen/text_size_big"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            app:layout_constraintTop_toTopOf="@+id/civAvatar"
-            app:layout_constraintStart_toEndOf="@+id/civAvatar"
-            android:layout_marginStart="@dimen/indent"
-            android:layout_marginEnd="@dimen/indent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/indent_vertical"
-    />
-
-    <TextView
-            android:id="@+id/tvPosition"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_size_middle"
-            android:textColor="@android:color/black"
-            app:layout_constraintTop_toBottomOf="@+id/tvSpeaker"
-            app:layout_constraintStart_toEndOf="@+id/civAvatar"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="@dimen/indent"
-            android:layout_marginTop="@dimen/indent_vertical"
-            android:layout_marginEnd="@dimen/indent"
-    />
-
-    <ImageView
-            android:id="@+id/ivTelegram"
-            android:layout_width="@dimen/width_image"
-            android:layout_height="@dimen/width_image"
-            tools:srcCompat="@drawable/ic_telegram"
-            android:tint="@color/colorMessager"
-            android:layout_marginStart="@dimen/indent"
-            app:layout_constraintStart_toEndOf="@+id/civAvatar"
-            app:layout_constraintBottom_toTopOf="@+id/tvInfoSpeaker"
-            android:layout_marginBottom="@dimen/indent_vertical"
-            app:layout_constraintTop_toBottomOf="@+id/tvPosition" android:layout_marginTop="10dp"/>
-
-    <ImageView
-            android:id="@+id/ivTwitter"
-            android:layout_width="@dimen/width_image"
-            android:layout_height="@dimen/width_image"
-            tools:srcCompat="@drawable/ic_twitter"
-            android:tint="@color/colorMessager"
-            android:layout_marginStart="@dimen/indent"
-            app:layout_constraintStart_toEndOf="@+id/ivTelegram"
-            app:layout_constraintBottom_toTopOf="@+id/tvInfoSpeaker"
-            android:layout_marginBottom="@dimen/indent_vertical" android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/tvPosition"/>
-
-    <TextView
-            android:id="@+id/tvInfoSpeaker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/text_size_middle"
-            android:paddingStart="@dimen/indent"
-            android:paddingEnd="@dimen/indent"
-            android:paddingTop="@dimen/indent_vertical"
-            android:paddingBottom="@dimen/indent_vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/civAvatar"
-    />
-
-    <View
-            android:id="@+id/vProtocol"
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/clParrent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorSilver"
-            tools:layout_editor_absoluteX="-20dp"
-            android:layout_marginTop="@dimen/indent_vertical"
-            app:layout_constraintTop_toBottomOf="@+id/tvInfoSpeaker"
-    />
+            android:layout_height="match_parent">
 
-    <TextView
-            android:id="@+id/tvTheme"
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:textSize="@dimen/text_size_big"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:paddingStart="@dimen/indent_horizontal"
-            android:paddingEnd="@dimen/indent_horizontal"
-            android:paddingTop="@dimen/indent_vertical"
-            app:layout_constraintTop_toTopOf="@+id/vProtocol"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/tvRoom"
-            android:layout_marginStart="8dp"
-    />
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civAvatar"
+                android:layout_width="@dimen/sizeAvatar"
+                android:layout_height="@dimen/sizeAvatar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/indent"
+                android:layout_marginTop="@dimen/indentImage"
+                tools:src="@drawable/ic_rus"
+        />
 
-    <TextView
-            android:id="@+id/tvRoom"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="@dimen/text_size_middle"
-            android:paddingEnd="@dimen/indent"
-            android:textColor="@android:color/black"
-            android:layout_marginStart="@dimen/indent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivContent"
-    />
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civBack"
+                android:layout_width="@dimen/sizeBackImage"
+                android:layout_height="@dimen/sizeBackImage"
+                android:src="@drawable/white_image"
+                app:layout_constraintEnd_toEndOf="@+id/ivLanguage"
+                app:layout_constraintBottom_toBottomOf="@+id/ivLanguage"
+                app:layout_constraintStart_toStartOf="@+id/ivLanguage"
+                app:layout_constraintTop_toTopOf="@+id/ivLanguage"
+        />
 
-    <ImageView
-            android:id="@+id/ivContent"
-            android:layout_width="@dimen/width_image"
-            android:layout_height="@dimen/height_image"
-            android:tint="@android:color/holo_green_dark"
-            android:layout_marginStart="@dimen/indent"
-            android:layout_marginTop="@dimen/indent_vertical"
-            app:layout_constraintTop_toTopOf="@+id/vProtocol"
-            app:layout_constraintStart_toStartOf="parent"
-    />
+        <ImageView
+                android:id="@+id/ivLanguage"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/width_image"
+                app:layout_constraintEnd_toEndOf="@+id/civAvatar"
+                app:layout_constraintBottom_toBottomOf="@+id/civAvatar"
+                android:layout_marginEnd="@dimen/indentLanguageInAvatar"
+                android:layout_marginBottom="@dimen/indentLanguageInAvatar"
+        />
 
-    <TextView
-            android:id="@+id/tvTime"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="@dimen/text_size_big"
-            android:textColor="@android:color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/indent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRoom"
-    />
+        <TextView
+                android:id="@+id/tvSpeaker"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textSize="@dimen/text_size_big"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toTopOf="@+id/civAvatar"
+                app:layout_constraintStart_toEndOf="@+id/civAvatar"
+                android:layout_marginStart="@dimen/indent"
+                android:layout_marginEnd="@dimen/indent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/indent_vertical"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvPosition"
+        />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+                android:id="@+id/tvPosition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_middle"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toEndOf="@+id/civAvatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/indent"
+                android:layout_marginEnd="@dimen/indent"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/ivTelegram"
+        />
+
+        <ImageView
+                android:id="@+id/ivTelegram"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/width_image"
+                tools:srcCompat="@drawable/ic_telegram"
+                android:tint="@color/colorMessager"
+                android:layout_marginStart="@dimen/indent"
+                app:layout_constraintStart_toEndOf="@+id/civAvatar"
+                app:layout_constraintBottom_toTopOf="@+id/tvInfoSpeaker"
+                android:layout_marginBottom="@dimen/indent_vertical"
+        />
+
+        <ImageView
+                android:id="@+id/ivTwitter"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/width_image"
+                tools:srcCompat="@drawable/ic_twitter"
+                android:tint="@color/colorMessager"
+                android:layout_marginStart="@dimen/indent"
+                app:layout_constraintStart_toEndOf="@+id/ivTelegram"
+                app:layout_constraintBottom_toTopOf="@+id/tvInfoSpeaker"
+                android:layout_marginBottom="@dimen/indent_vertical"
+                app:layout_constraintTop_toTopOf="@+id/ivTelegram"
+        />
+
+        <TextView
+                android:id="@+id/tvInfoSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_middle"
+                android:paddingStart="@dimen/indent"
+                android:paddingEnd="@dimen/indent"
+                android:paddingTop="@dimen/indent_vertical"
+                android:paddingBottom="@dimen/indent_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/civAvatar"
+                android:layout_marginTop="@dimen/indent_vertical"
+        />
+
+        <View
+                android:id="@+id/vProtocol"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorSilver"
+                android:layout_marginTop="@dimen/indent_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tvInfoSpeaker"
+                app:layout_constraintBottom_toBottomOf="@+id/clParrent"
+        />
+
+        <TextView
+                android:id="@+id/tvTheme"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textSize="@dimen/text_size_big"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingStart="@dimen/indent_horizontal"
+                android:paddingEnd="@dimen/indent_horizontal"
+                android:paddingTop="@dimen/indent_vertical"
+                app:layout_constraintTop_toTopOf="@+id/vProtocol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvRoom"
+                android:layout_marginBottom="@dimen/indent_vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/vProtocol"
+                app:layout_constraintVertical_bias="0.0"
+        />
+
+        <TextView
+                android:id="@+id/tvRoom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_size_middle"
+                android:paddingEnd="@dimen/indent"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="@dimen/indent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivContent"
+        />
+
+        <ImageView
+                android:id="@+id/ivContent"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/height_image"
+                android:tint="@android:color/holo_green_dark"
+                android:layout_marginStart="@dimen/indent"
+                android:layout_marginTop="@dimen/indent_vertical"
+                app:layout_constraintTop_toTopOf="@+id/vProtocol"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/tvTime"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_size_big"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/indent"
+                android:paddingBottom="@dimen/indent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRoom"
+                app:layout_constraintBottom_toBottomOf="@+id/vProtocol"
+        />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -7,19 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide.init
 import kotlinx.android.synthetic.main.topic_item.view.*
-import ru.grv.retrofittest.db.DevFestDatabase
 
-class ScheduleAdapter(private var talks: List<Talk>,
-                      private var spekers: List<Speaker>
-) : RecyclerView.Adapter<ScheduleAdapter.ViewHolder>() {
-
+class ScheduleAdapter(private var talks: List<Talk>, private var spekers: List<Speaker>) :
+    RecyclerView.Adapter<ScheduleAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent?.context)
             .inflate(R.layout.topic_item, parent, false)
-
-
         return ViewHolder(itemView)
     }
 
@@ -83,13 +77,13 @@ class ScheduleAdapter(private var talks: List<Talk>,
         }
     }
 
-    fun update(talks: List<Talk>?, speakers: List<Speaker>?){
+    fun update(talks: List<Talk>?, speakers: List<Speaker>?) {
         talks?.let { this.talks = talks }
         speakers?.let { this.spekers = speakers }
         notifyDataSetChanged()
     }
 
-    class ViewHolder(row: View): RecyclerView.ViewHolder(row) {
+    class ViewHolder(row: View) : RecyclerView.ViewHolder(row) {
         var time: TextView? = null
         var title: TextView? = null
         var room: TextView? = null
